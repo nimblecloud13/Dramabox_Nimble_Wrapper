@@ -47,6 +47,12 @@ Connect the `audio` output to a **Save Audio** node.
 
 Frees all DramaBox models from VRAM. Can sit inline in a chain via the `passthrough_audio` input.
 
+## Why pace_wpm?
+
+DramaBox requires you to specify the output duration upfront before it generates — unlike most TTS systems that just produce however much audio the text needs. That means without some help, you'd have to manually guess how many seconds your prompt will take to speak, try it, check the result, and adjust.
+
+The `pace_wpm` slider attempts to solve this by estimating duration automatically: it extracts the quoted dialogue from your prompt, counts the words, and divides by your expected speaking rate to get a target duration before generation starts. That way the model has a realistic length to aim for without you doing the math yourself. The `gen_duration` override is still there if you want exact control, but for most uses the auto-estimate gets you close enough on the first try.
+
 ## Notes
 
 - Models load on first generation and are cached in VRAM unless `free_memory_after_generate` is enabled.
