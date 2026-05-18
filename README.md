@@ -21,7 +21,7 @@ A ComfyUI custom node wrapping [resemble-ai/DramaBox](https://github.com/resembl
 
 3. Clone this node:
    ```
-   git clone https://github.com/nimblecloud13/comfyui_dramabox <your_comfyui>/custom_nodes/comfyui_dramabox
+   git clone https://github.com/nimblecloud13/Dramabox_Nimble_Wrapper <your_comfyui>/custom_nodes/comfyui_dramabox
    ```
 
 ## Usage
